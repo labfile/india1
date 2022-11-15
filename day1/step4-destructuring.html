@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+    <script>
+        var hero = {
+            title : "Batman",
+            power : 7,
+            firstname : "Bruce",
+            lastname : "Wayne",
+            city : "Gotham"
+        };
+        /* 
+        var temphero = hero;
+        console.log(temphero.title);// 
+        console.log(hero.title);// 
+        temphero.title = "Joker";
+        console.log(hero.title);// ???   
+        */
+        /* var herotitle = hero.title;
+        console.log(herotitle);
+        console.log(hero.title);
+        herotitle = "Joker";
+        console.log(herotitle);
+        console.log(hero.title); */
+        // es6
+        // let { title : herotitle, power : heropower } = hero;
+        /* 
+        let { title, power } = hero;
+        console.log(title);
+        title = "Joker";
+        console.log(title);
+        console.log(hero.title);
+        console.log(power); 
+        */
+        // var temphero = {...hero};
+        var temphero = JSON.parse( JSON.stringify(hero) );
+        console.log(temphero.title);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!-- http://p.ip.fi/LkDx -->

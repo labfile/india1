@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events virtual elements</title>
+    <style>
+        button{
+            background-color: darkgreen;
+            color: aliceblue;
+            padding: 10px;
+        }
+        .container{
+            width: 800px;
+            height: 300px;
+            background-color: darkblue;
+            overflow: auto;
+        }
+        .container div{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(177, 177, 233);
+            float: left;
+            margin: 5px;
+        }
+    </style>
+    <script>
+        function init(){
+            document.getElementsByTagName("button")[0].onclick = function(){
+                var box = document.createElement("div");
+                    box.innerHTML = "hello";
+                document.getElementsByClassName("container")[0].appendChild(box);
+            };
+        }
+        window.onload = init;
+    </script>
+</head>
+<body>
+    <button>Add Box</button>
+    <hr>
+    <div class="container"></div>
+</body>
+</html>
+
+<!-- http://p.ip.fi/FR0f  -->
