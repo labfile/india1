@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+    <script>
+        class Hero{
+        // properties
+            // private 
+            // public
+            // static
+        // methods
+            // static
+        // get
+        // set
+        // constructor
+            // public
+            title = "default title";
+            firstname = "default firstname";
+            lastname = "default lastname";
+            #mission = "my private mission";
+            static version = 1001
+            constructor(htitle, hfname, hlname){
+                this.title = htitle;
+                this.firstname = hfname;
+                this.lastname = hlname;
+            }
+            fullname(){
+                return this.firstname+" "+this.lastname;
+            }
+            get mission(){
+                return this.#mission
+            }
+            set mission(nmission){
+                this.#mission = nmission;
+            }
+        };
+
+        var hero = new Hero("Batman","Bruce","Wayne");
+        console.log(hero.title);// Batman
+        console.log(hero.fullname());
+        // console.log(hero.#mission);
+        console.log( hero.mission );
+        hero.mission = "Save the world";
+        console.log( hero.mission );
+        console.log( Hero.version );
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!-- http://p.ip.fi/yf4X -->

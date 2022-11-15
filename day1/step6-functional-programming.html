@@ -6,12 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Functional Improvements</title>
     <script>
+        // var cart = {
+        //     getCostPrice : function(){
+        //         return 100;
+        //     },
+        //     getSellingPrice : function(){
+        //         var calculateProfit = function(scope){
+        //             return scope.getCostPrice() * 0.2;
+        //         };
+        //         return this.getCostPrice() + calculateProfit(this);
+        //     }
+        // };
+        // var cart = {
+        //     getCostPrice : function(){
+        //         return 100;
+        //     },
+        //     getSellingPrice : function(){
+        //         var scope = this;
+        //         var calculateProfit = function(){
+        //             return scope.getCostPrice() * 0.2;
+        //         };
+        //         return this.getCostPrice() + calculateProfit();
+        //     }
+        // };
+        // var cart = {
+        //     getCostPrice : function(){
+        //         return 100;
+        //     },
+        //     getSellingPrice : function(){
+        //         var calculateProfit = function(){
+        //             return this.getCostPrice() * 0.2;
+        //         };
+        //         // return this.getCostPrice() + calculateProfit.call(this);
+        //         // return this.getCostPrice() + calculateProfit.apply(this);
+        //         return this.getCostPrice() + calculateProfit.bind(this)();
+        //     }
+        // };
         var cart = {
             getCostPrice : function(){
                 return 100;
             },
             getSellingPrice : function(){
-                var calculateProfit = function(){
+                var calculateProfit = () => {
                     return this.getCostPrice() * 0.2;
                 };
                 return this.getCostPrice() + calculateProfit();
@@ -26,3 +62,8 @@
 </html>
 
 <!-- http://p.ip.fi/X752 -->
+
+<!-- https://github.com/labfile -->
+
+
+<!-- http://p.ip.fi/OBq8 -->
